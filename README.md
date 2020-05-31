@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Goals
+
+The goal of this project is to spin up a personal blog / resource sharing website that communicatese with an Azure backend using Azure Functions and Cosmos DB.
+
 ## Available Scripts
 
 In the project directory, you can run:
