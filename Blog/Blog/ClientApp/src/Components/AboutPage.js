@@ -9,6 +9,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import WorkIcon from "@material-ui/icons/Work";
 import SchoolIcon from "@material-ui/icons/School";
 import StarIcon from "@material-ui/icons/Star";
+import AvatarImage from "../Images/avatar.png";
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -48,35 +49,42 @@ export default function Album() {
   return (
     <React.Fragment>
         <div className={classes.heroContent}>
-          <Container maxWidth="sm">
-            <Typography component="h2" variant="h3" align="center" color="textPrimary" gutterBottom>
-              About Me
-            </Typography>
-            <Typography variant="h5" align="center" color="textSecondary" paragraph>
-              Nice to meet you!
-            </Typography>
-            <div className={classes.heroButtons}>
-              <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                Contact Me:
+          <Container maxWidth="md">
+            <Grid container spacing={2} alignContent="center">
+              <Grid item xs={8}>
+              <Typography component="h2" variant="h3" color="textPrimary" gutterBottom>
+                About Me
               </Typography>
-              <Typography variant="h5" align="center" color="textSecondary" paragraph>
-                email@email.com
+              <Typography variant="h5" color="textSecondary" paragraph>
+                Nice to meet you!
               </Typography>
-            </div>
-            <div className={classes.heroButtons}>
-              <Grid container spacing={2} justify="center">
-                <Grid item>
-                  <Button variant="contained" color="primary">
-                    LinkedIn
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button variant="outlined" color="primary">
-                    GitHub
-                  </Button>
-                </Grid>
+              <div className={classes.heroButtons}>
+                <Typography variant="h5" color="textSecondary" paragraph>
+                  Contact Me:
+                </Typography>
+                <Typography variant="h5" color="textSecondary" paragraph>
+                  email@email.com
+                </Typography>
+              </div>
+              <div className={classes.heroButtons}>
+                <Grid container spacing={2}>
+                  <Grid item>
+                    <Button variant="contained" color="primary">
+                      LinkedIn
+                    </Button>
+                  </Grid>
+                  <Grid item>
+                    <Button variant="outlined" color="primary">
+                      GitHub
+                    </Button>
+                  </Grid>
               </Grid>
             </div>
+              </Grid>
+              <Grid item xs={4}>
+                <img src={AvatarImage} alt="" width="100%"/>
+              </Grid>
+            </Grid>
           </Container>
         </div>
         <Container className={classes.cardGrid} maxWidth="md">

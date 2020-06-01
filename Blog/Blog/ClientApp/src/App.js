@@ -35,7 +35,7 @@ function App() {
           </Route>
         </Switch>
       </Container>
-      <Footer title="Footer" description="Something here to give the footer a purpose!" />
+      <Footer title="" description="Websites by Wesley Howell" />
     </React.Fragment>
     </Router>
   );
