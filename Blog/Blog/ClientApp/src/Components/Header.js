@@ -4,6 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import Logo from '../Images/logo_size.png';
 
 const useStyles = makeStyles((theme) => ({
   toolbar: {
@@ -24,20 +25,20 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Header(props) {
   const classes = useStyles();
-  const { sections, title } = props;
+  const { sections } = props;
 
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
         <Typography
           component="h2"
-          variant="h5"
+          variant="h3"
           color="inherit"
           align="center"
           noWrap
           className={classes.toolbarTitle}
         >
-          {title}
+          <img src={Logo} alt="wescodes.tech"/>
         </Typography>
       </Toolbar>
       <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
