@@ -5,7 +5,7 @@ import ThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
-import Link from "@material-ui/core/Link";
+import Button from "@material-ui/core/Button";
 import Logo from "../Images/icon.png";
 
 const useStyles = makeStyles((theme) => ({
@@ -72,16 +72,14 @@ export default function Header(props) {
           className={classes.toolbarSecondary}
         >
           {sections.map((section) => (
-            <Link
-              color="inherit"
-              noWrap
+            <Button
               key={section.title}
-              variant="body2"
               href={section.url}
-              className={classes.toolbarLink}
+              style={{ color: "whiteSmoke", textTransform: "none" }}
+              fullWidth
             >
-              {section.title}
-            </Link>
+              <Typography variant="h6">{section.title}</Typography>
+            </Button>
           ))}
         </Toolbar>
       </AppBar>

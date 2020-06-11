@@ -55,177 +55,176 @@ export default function Album() {
 
   return (
     <React.Fragment>
-      <Container maxWidth="md">
-        <Grid container spacing={2} alignContent="center">
-          <Grid item xs={8}>
-            <Typography
-              component="h2"
-              variant="h3"
-              color="textPrimary"
-              gutterBottom
-            >
-              About Me
+      <Grid container spacing={2} alignContent="center">
+        <Grid item xs={12} sm={5}>
+          <Typography
+            component="h2"
+            variant="h3"
+            color="textPrimary"
+            align="center"
+            gutterBottom
+          >
+            <img align="center" src={AvatarImage} alt="" width="30%" />
+            About Me
+          </Typography>
+          <Typography variant="body1" paragraph>
+            Nice to meet you!
+          </Typography>
+          <Typography variant="body1" paragraph>
+            I'm a Software Engineer that focuses on driving the use of good
+            engineering principles to develop high quality, defect free
+            software.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            My interests lie in developing software using proven testing
+            principles such as Test Driven Development, promoting detailed
+            software architecture designs, and testing code with high frequency
+            in order to find and reduce risks and defects in implemented
+            software.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            Technological interests run the gamut from full stack web
+            development, embedded device programming, security, automation, and
+            architecture design. If it required building something to solve
+            problems, I'm in.
+          </Typography>
+          <Typography variant="body1" paragraph>
+            My interests involve technology, photography and entrepreneurship.
+            I've been successful running a personal side businesses and maintain
+            a strong interest in business development and building strong
+            relationships with clients in order to ensure future success for
+            both the client and companies I work for.
+          </Typography>
+          <div>
+            <Typography variant="h5" paragraph>
+              Contact Me:
             </Typography>
-            <Typography variant="body1" paragraph>
-              Nice to meet you!
+            <Typography variant="h6" paragraph>
+              email: info -- wescodes.tech
             </Typography>
-            <Typography variant="body1" paragraph>
-              I'm a Software Engineer that focuses on driving the use of good
-              engineering principles to develop high quality, defect free
-              software.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              My interests lie in developing software using proven testing
-              principles such as Test Driven Development, promoting detailed
-              software architecture designs, and testing code with high
-              frequency in order to find and reduce risks and defects in
-              implemented software.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              Technological interests run the gamut from full stack web
-              development, embedded device programming, security, automation,
-              and architecture design. If it required building something to
-              solve problems, I'm in.
-            </Typography>
-            <Typography variant="body1" paragraph>
-              My interests involve technology, photography and entrepreneurship.
-              I've been successful running a personal side businesses and
-              maintain a strong interest in business development and building
-              strong relationships with clients in order to ensure future
-              success for both the client and companies I work for.
-            </Typography>
-            <div className={classes.heroButtons}>
-              <Typography variant="h5" paragraph>
-                Contact Me:
-              </Typography>
-              <Typography variant="h6" paragraph>
-                email: info -- wescodes.tech
-              </Typography>
-            </div>
-            <div className={classes.heroButtons}>
-              <Grid container spacing={2}>
-                <Grid item>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    target="_blank"
-                    href="https://www.linkedin.com/in/wesleyrhowell"
-                  >
-                    <LinkedInIcon />
-                    &nbsp;LinkedIn
-                  </Button>
-                </Grid>
-                <Grid item>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    target="_blank"
-                    href="https://github.com/wescodestech"
-                  >
-                    <GitHubIcon />
-                    &nbsp;GitHub
-                  </Button>
-                </Grid>
+          </div>
+          <div>
+            <Grid container spacing={2}>
+              <Grid item>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  target="_blank"
+                  href="https://www.linkedin.com/in/wesleyrhowell"
+                  style={{ backgroundColor: "slategrey" }}
+                >
+                  <LinkedInIcon />
+                  &nbsp;LinkedIn
+                </Button>
               </Grid>
-            </div>
-          </Grid>
-          <Grid item xs={4}>
-            <img src={AvatarImage} alt="" width="100%" />
-          </Grid>
+              <Grid item>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  target="_blank"
+                  href="https://github.com/wescodestech"
+                  style={{ backgroundColor: "slategrey" }}
+                >
+                  <GitHubIcon />
+                  &nbsp;GitHub
+                </Button>
+              </Grid>
+            </Grid>
+          </div>
         </Grid>
-      </Container>
-      <Container className={classes.cardGrid} maxWidth="md">
-        <VerticalTimeline>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-            date="Summer 2020"
-            iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
-            icon={<WebIcon />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              Launched This Site
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              WesCodes.tech Blog
-            </h4>
-            <p>Main Designer, Developer, Writer</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-            date="2018 - present"
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<WorkIcon />}
-          >
-            <h3 className="vertical-timeline-element-title">CivicPlus</h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Manhattan, KS
-            </h4>
-            <p>Software Engineer</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2013 - 2018"
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<WorkIcon />}
-          >
-            <h3 className="vertical-timeline-element-title">Garmin</h3>
-            <h4 className="vertical-timeline-element-subtitle">Olathe, KS</h4>
-            <p>Software Engineer</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2012"
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<WorkIcon />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              ArcBest Technologies (Data-Tronics Corp.)
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">
-              Ft. Smith, AR
-            </h4>
-            <p>Programmer Analyst</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--work"
-            date="2008 - 2012"
-            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
-            icon={<WorkIcon />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              Wesley Howell Photography
-            </h3>
-            <h4 className="vertical-timeline-element-subtitle">Woodward, OK</h4>
-            <p>Owner, Photographer</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            className="vertical-timeline-element--education"
-            date="2009 - 2013"
-            iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
-            icon={<SchoolIcon />}
-          >
-            <h3 className="vertical-timeline-element-title">
-              <Grid container spacing={2}>
-                <Grid item xs={8}>
-                  Bachelor of Science in Computer Science
+
+        <Grid item xs={12} sm={7}>
+          <VerticalTimeline>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              contentStyle={{ background: "slategrey", color: "#fff" }}
+              contentArrowStyle={{
+                borderRight: "7px solid  slategrey",
+              }}
+              iconStyle={{ background: "steelblue", color: "#fff" }}
+              icon={<WebIcon />}
+            >
+              <h3 className="vertical-timeline-element-title">
+                Launched This Site
+              </h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                WesCodes.tech Blog
+              </h4>
+              <p>Main Designer, Developer, Writer</p>
+              <p>Summer 2020</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              contentStyle={{ background: "slategrey", color: "#fff" }}
+              contentArrowStyle={{
+                borderRight: "7px solid  slategrey",
+              }}
+              iconStyle={{ background: "slategrey", color: "#fff" }}
+              icon={<WorkIcon />}
+            >
+              <h3 className="vertical-timeline-element-title">CivicPlus</h3>
+              <p>Software Engineer</p>
+              <p>2018 - Present</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              iconStyle={{ background: "slategrey", color: "#fff" }}
+              icon={<WorkIcon />}
+            >
+              <h3 className="vertical-timeline-element-title">Garmin</h3>
+              <h4 className="vertical-timeline-element-subtitle">
+                Automotive OEM
+              </h4>
+              <p>Software Engineer</p>
+              <p>2013-2018</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              iconStyle={{ background: "slategrey", color: "#fff" }}
+              icon={<WorkIcon />}
+            >
+              <h3 className="vertical-timeline-element-title">
+                ArcBest Technologies (Data-Tronics Corp.)
+              </h3>
+              <p>Programmer Analyst</p>
+              <p>2012</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--work"
+              iconStyle={{ background: "slategrey", color: "#fff" }}
+              icon={<WorkIcon />}
+            >
+              <h3 className="vertical-timeline-element-title">
+                Wes Photography
+              </h3>
+              <p>Owner, Photographer</p>
+              <p>2008-2012</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              className="vertical-timeline-element--education"
+              iconStyle={{ background: "darkred", color: "#fff" }}
+              icon={<SchoolIcon />}
+            >
+              <h3 className="vertical-timeline-element-title">
+                <Grid container spacing={2}>
+                  <Grid item xs={8}>
+                    Bachelor of Science in Computer Science
+                  </Grid>
+                  <Grid item xs={4}>
+                    <img src={OuLogo} alt="" width="50%" />
+                  </Grid>
                 </Grid>
-                <Grid item xs={4}>
-                  <img src={OuLogo} alt="" width="50%" />
-                </Grid>
-              </Grid>
-            </h3>
-            <p>University of Oklahoma</p>
-          </VerticalTimelineElement>
-          <VerticalTimelineElement
-            iconStyle={{ background: "rgb(16, 204, 82)", color: "#fff" }}
-            icon={<StarIcon />}
-          />
-        </VerticalTimeline>
-      </Container>
+              </h3>
+              <p>University of Oklahoma</p>
+              <p>2009-2013</p>
+            </VerticalTimelineElement>
+            <VerticalTimelineElement
+              iconStyle={{ background: "steelblue", color: "#fff" }}
+              icon={<StarIcon />}
+            />
+          </VerticalTimeline>
+        </Grid>
+      </Grid>
     </React.Fragment>
   );
 }
