@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import ThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
@@ -26,20 +27,22 @@ const useStyles = makeStyles((theme) => ({
 export default function Header(props) {
   const classes = useStyles();
   const { sections } = props;
+  let theme = createMuiTheme();
+
+  theme = responsiveFontSizes(theme);
 
   return (
     <React.Fragment>
       <Toolbar className={classes.toolbar}>
+        <ThemeProvider theme={theme}>
             <Typography
             variant="h3"
-            color="inherit"
             align="center"
-            noWrap
             style={{fontFamily: "monospace", padding: "10px"}}
-            className={classes.toolbarTitle}
             > 
               <img src={Logo} alt="wescodes.tech" height="56px" align="center"/> WesCodes.tech
             </Typography>
+          </ThemeProvider>
         
       </Toolbar>
       <Toolbar component="nav" variant="dense" className={classes.toolbarSecondary}>
