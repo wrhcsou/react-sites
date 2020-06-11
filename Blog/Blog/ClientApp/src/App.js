@@ -14,8 +14,7 @@ import './App.css';
 
 const sections = [
   { title: 'Home', url: '/' },
-  { title: 'Stories', url: '/' },
-  { title: 'Resources', url: '/' },
+  { title: 'Blog Archive', url: '/' },
   { title: 'About Me', url: '/about' },
 ];
 

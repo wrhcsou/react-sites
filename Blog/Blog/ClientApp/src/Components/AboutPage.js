@@ -11,6 +11,9 @@ import SchoolIcon from "@material-ui/icons/School";
 import StarIcon from "@material-ui/icons/Star";
 import AvatarImage from "../Images/avatar.png";
 import OuLogo from "../Images/oulogo.png";
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import WebIcon from '@material-ui/icons/Web';
 
 const useStyles = makeStyles((theme) => ({
   icon: {
@@ -56,27 +59,45 @@ export default function Album() {
               <Typography component="h2" variant="h3" color="textPrimary" gutterBottom>
                 About Me
               </Typography>
-              <Typography variant="h5" color="textSecondary" paragraph>
+              <Typography variant="body1" color="textSecondary" paragraph>
                 Nice to meet you!
+              </Typography>
+              <Typography variant="body1" color="textSecondary" paragraph>
+                I'm a Software Engineer that focuses on driving the use of good engineering principles to 
+                develop high quality, defect free software.
+              </Typography>
+              <Typography variant="body1" color="textSecondary" paragraph>
+                My interests lie in developing software using proven testing principles such as Test Driven Development, 
+                promoting detailed software architecture designs, and testing code with high frequency in order to find 
+                and reduce risks and defects in implemented software.
+              </Typography>
+              <Typography variant="body1" color="textSecondary" paragraph>
+                Technological interests run the gamut from full stack web development, embedded device programming, security, 
+                automation, and architecture design. If it required building something to solve problems, I'm in.
+              </Typography>
+              <Typography variant="body1" color="textSecondary" paragraph>
+                My interests involve technology, photography and entrepreneurship. I've been successful running a personal side 
+                businesses and maintain a strong interest in business development and building strong relationships with clients 
+                in order to ensure future success for both the client and companies I work for.
               </Typography>
               <div className={classes.heroButtons}>
                 <Typography variant="h5" color="textSecondary" paragraph>
                   Contact Me:
                 </Typography>
-                <Typography variant="h5" color="textSecondary" paragraph>
-                  email@email.com
+                <Typography variant="h6" color="textSecondary" paragraph>
+                  email: info -- wescodes.tech
                 </Typography>
               </div>
               <div className={classes.heroButtons}>
                 <Grid container spacing={2}>
                   <Grid item>
-                    <Button variant="contained" color="primary">
-                      LinkedIn
+                    <Button variant="contained" color="primary" href="https://www.linkedin.com/in/wesleyrhowell">
+                      <LinkedInIcon />&nbsp;LinkedIn
                     </Button>
                   </Grid>
                   <Grid item>
-                    <Button variant="outlined" color="primary">
-                      GitHub
+                    <Button variant="contained" color="primary" href="https://github.com/wescodestech">
+                      <GitHubIcon />&nbsp;GitHub
                     </Button>
                   </Grid>
               </Grid>
@@ -90,6 +111,20 @@ export default function Album() {
         </div>
         <Container className={classes.cardGrid} maxWidth="md">
           <VerticalTimeline>
+            <VerticalTimelineElement
+                className="vertical-timeline-element--work"
+                contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
+                contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
+                date="Summer 2020"
+                iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
+                icon={<WebIcon />}
+              >
+              <h3 className="vertical-timeline-element-title">Launched This Site</h3>
+              <h4 className="vertical-timeline-element-subtitle">WesCodes.tech Blog</h4>
+              <p>
+                Main Designer, Developer, Writer
+              </p>
+            </VerticalTimelineElement>
             <VerticalTimelineElement
               className="vertical-timeline-element--work"
               contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
