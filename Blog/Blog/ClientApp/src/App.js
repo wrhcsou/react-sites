@@ -1,6 +1,5 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import Container from "@material-ui/core/Container";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -18,17 +17,18 @@ function App() {
   return (
     <Router>
       <React.Fragment>
-        <CssBaseline />
         <Container maxWidth="lg">
           <Header title="Blog" sections={sections} />
-          <Switch>
-            <Route path="/about">
-              <AboutPage />
-            </Route>
-            <Route path="/">
-              <Blog />
-            </Route>
-          </Switch>
+          <div style={{ padding: "0.5em" }}>
+            <Switch>
+              <Route path="/about">
+                <AboutPage />
+              </Route>
+              <Route path="/">
+                <Blog />
+              </Route>
+            </Switch>
+          </div>
         </Container>
         <Footer title="" description="Websites by Wesley Howell" />
       </React.Fragment>

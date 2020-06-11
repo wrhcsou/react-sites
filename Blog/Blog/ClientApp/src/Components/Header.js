@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles, createMuiTheme } from "@material-ui/core/styles";
 import ThemeProvider from "@material-ui/core/styles/MuiThemeProvider";
+import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Link from "@material-ui/core/Link";
@@ -22,6 +23,10 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     flexShrink: 0,
   },
+  appbar: {
+    colorPrimary: "rgb(115, 140, 165)",
+  },
+  offset: theme.mixins.toolbar,
 }));
 
 export default function Header(props) {
@@ -41,38 +46,48 @@ export default function Header(props) {
 
   return (
     <React.Fragment>
-      <Toolbar className={classes.toolbar}>
-        <ThemeProvider theme={theme}>
-          <Typography
-            variant="h3"
-            color="inherit"
-            align="center"
-            style={{ fontFamily: "monospace", padding: "10px" }}
-            className={classes.toolbarTitle}
-          >
-            <img src={Logo} alt="wescodes.tech" height="56px" align="center" />{" "}
-            WesCodes.tech
-          </Typography>
-        </ThemeProvider>
-      </Toolbar>
-      <Toolbar
-        component="nav"
-        variant="dense"
-        className={classes.toolbarSecondary}
-      >
-        {sections.map((section) => (
-          <Link
-            color="inherit"
-            noWrap
-            key={section.title}
-            variant="body2"
-            href={section.url}
-            className={classes.toolbarLink}
-          >
-            {section.title}
-          </Link>
-        ))}
-      </Toolbar>
+      <AppBar position="fixed" style={{ background: "slategrey" }}>
+        <Toolbar className={classes.toolbar}>
+          <ThemeProvider theme={theme}>
+            <Typography
+              variant="h3"
+              color="inherit"
+              align="center"
+              style={{ fontFamily: "monospace", padding: "10px" }}
+              className={classes.toolbarTitle}
+            >
+              <img
+                src={Logo}
+                alt="wescodes.tech"
+                height="56px"
+                align="center"
+              />{" "}
+              WesCodes.tech
+            </Typography>
+          </ThemeProvider>
+        </Toolbar>
+        <Toolbar
+          component="nav"
+          variant="dense"
+          className={classes.toolbarSecondary}
+        >
+          {sections.map((section) => (
+            <Link
+              color="inherit"
+              noWrap
+              key={section.title}
+              variant="body2"
+              href={section.url}
+              className={classes.toolbarLink}
+            >
+              {section.title}
+            </Link>
+          ))}
+        </Toolbar>
+      </AppBar>
+      <div className={classes.offset} />
+      <div className={classes.offset} />
+      <div className={classes.offset} />
     </React.Fragment>
   );
 }

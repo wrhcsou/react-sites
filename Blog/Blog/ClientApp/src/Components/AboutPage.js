@@ -55,86 +55,85 @@ export default function Album() {
 
   return (
     <React.Fragment>
-      <div className={classes.heroContent}>
-        <Container maxWidth="md">
-          <Grid container spacing={2} alignContent="center">
-            <Grid item xs={8}>
-              <Typography
-                component="h2"
-                variant="h3"
-                color="textPrimary"
-                gutterBottom
-              >
-                About Me
+      <Container maxWidth="md">
+        <Grid container spacing={2} alignContent="center">
+          <Grid item xs={8}>
+            <Typography
+              component="h2"
+              variant="h3"
+              color="textPrimary"
+              gutterBottom
+            >
+              About Me
+            </Typography>
+            <Typography variant="body1" paragraph>
+              Nice to meet you!
+            </Typography>
+            <Typography variant="body1" paragraph>
+              I'm a Software Engineer that focuses on driving the use of good
+              engineering principles to develop high quality, defect free
+              software.
+            </Typography>
+            <Typography variant="body1" paragraph>
+              My interests lie in developing software using proven testing
+              principles such as Test Driven Development, promoting detailed
+              software architecture designs, and testing code with high
+              frequency in order to find and reduce risks and defects in
+              implemented software.
+            </Typography>
+            <Typography variant="body1" paragraph>
+              Technological interests run the gamut from full stack web
+              development, embedded device programming, security, automation,
+              and architecture design. If it required building something to
+              solve problems, I'm in.
+            </Typography>
+            <Typography variant="body1" paragraph>
+              My interests involve technology, photography and entrepreneurship.
+              I've been successful running a personal side businesses and
+              maintain a strong interest in business development and building
+              strong relationships with clients in order to ensure future
+              success for both the client and companies I work for.
+            </Typography>
+            <div className={classes.heroButtons}>
+              <Typography variant="h5" paragraph>
+                Contact Me:
               </Typography>
-              <Typography variant="body1" color="textSecondary" paragraph>
-                Nice to meet you!
+              <Typography variant="h6" paragraph>
+                email: info -- wescodes.tech
               </Typography>
-              <Typography variant="body1" color="textSecondary" paragraph>
-                I'm a Software Engineer that focuses on driving the use of good
-                engineering principles to develop high quality, defect free
-                software.
-              </Typography>
-              <Typography variant="body1" color="textSecondary" paragraph>
-                My interests lie in developing software using proven testing
-                principles such as Test Driven Development, promoting detailed
-                software architecture designs, and testing code with high
-                frequency in order to find and reduce risks and defects in
-                implemented software.
-              </Typography>
-              <Typography variant="body1" color="textSecondary" paragraph>
-                Technological interests run the gamut from full stack web
-                development, embedded device programming, security, automation,
-                and architecture design. If it required building something to
-                solve problems, I'm in.
-              </Typography>
-              <Typography variant="body1" color="textSecondary" paragraph>
-                My interests involve technology, photography and
-                entrepreneurship. I've been successful running a personal side
-                businesses and maintain a strong interest in business
-                development and building strong relationships with clients in
-                order to ensure future success for both the client and companies
-                I work for.
-              </Typography>
-              <div className={classes.heroButtons}>
-                <Typography variant="h5" color="textSecondary" paragraph>
-                  Contact Me:
-                </Typography>
-                <Typography variant="h6" color="textSecondary" paragraph>
-                  email: info -- wescodes.tech
-                </Typography>
-              </div>
-              <div className={classes.heroButtons}>
-                <Grid container spacing={2}>
-                  <Grid item>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      href="https://www.linkedin.com/in/wesleyrhowell"
-                    >
-                      <LinkedInIcon />
-                      &nbsp;LinkedIn
-                    </Button>
-                  </Grid>
-                  <Grid item>
-                    <Button
-                      variant="contained"
-                      color="primary"
-                      href="https://github.com/wescodestech"
-                    >
-                      <GitHubIcon />
-                      &nbsp;GitHub
-                    </Button>
-                  </Grid>
+            </div>
+            <div className={classes.heroButtons}>
+              <Grid container spacing={2}>
+                <Grid item>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    target="_blank"
+                    href="https://www.linkedin.com/in/wesleyrhowell"
+                  >
+                    <LinkedInIcon />
+                    &nbsp;LinkedIn
+                  </Button>
                 </Grid>
-              </div>
-            </Grid>
-            <Grid item xs={4}>
-              <img src={AvatarImage} alt="" width="100%" />
-            </Grid>
+                <Grid item>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    target="_blank"
+                    href="https://github.com/wescodestech"
+                  >
+                    <GitHubIcon />
+                    &nbsp;GitHub
+                  </Button>
+                </Grid>
+              </Grid>
+            </div>
           </Grid>
-        </Container>
-      </div>
+          <Grid item xs={4}>
+            <img src={AvatarImage} alt="" width="100%" />
+          </Grid>
+        </Grid>
+      </Container>
       <Container className={classes.cardGrid} maxWidth="md">
         <VerticalTimeline>
           <VerticalTimelineElement
