@@ -19,6 +19,25 @@
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="ClientApp\build\logo512.png" />
+    <None Remove="ClientApp\build\robots.txt" />
+    <None Remove="ClientApp\build\index.html" />
+    <None Remove="ClientApp\build\logo512.png" />
+    <None Remove="ClientApp\build\manifest.json" />
+    <None Remove="ClientApp\build\service-worker.js" />
+    <None Remove="ClientApp\build\robots.txt" />
+    <None Remove="ClientApp\build\static\css\main.5f361e03.chunk.css" />
+    <None Remove="ClientApp\build\static\css\2.f681e662.chunk.css" />
+    <None Remove="ClientApp\build\static\css\2.f681e662.chunk.css.map" />
+    <None Remove="ClientApp\build\static\css\main.5f361e03.chunk.css.map" />
+    <None Remove="ClientApp\build\static\js\runtime-main.ababd92d.js.map" />
+    <None Remove="ClientApp\build\static\js\runtime-main.ababd92d.js" />
+    <None Remove="ClientApp\build\static\media\blog-post.1.cb471b9e.md" />
+    <None Remove="ClientApp\build\static\media\blog-post.2.c206db4f.md" />
+    <None Remove="ClientApp\build\static\media\avatar.914a1024.png" />
+    <None Remove="ClientApp\build\static\media\blog-post.3.8211793f.md" />
+  </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->
     <Exec Command="node --version" ContinueOnError="true">
