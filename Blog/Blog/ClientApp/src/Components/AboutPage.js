@@ -2,8 +2,6 @@ import React from "react";
 import Button from "@material-ui/core/Button";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
-import Container from "@material-ui/core/Container";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -18,41 +16,7 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import WebIcon from "@material-ui/icons/Web";
 
-const useStyles = makeStyles((theme) => ({
-  icon: {
-    marginRight: theme.spacing(2),
-  },
-  heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
-  },
-  heroButtons: {
-    marginTop: theme.spacing(4),
-  },
-  cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
-  },
-  card: {
-    height: "100%",
-    display: "flex",
-    flexDirection: "column",
-  },
-  cardMedia: {
-    paddingTop: "56.25%", // 16:9
-  },
-  cardContent: {
-    flexGrow: 1,
-  },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6),
-  },
-}));
-
 export default function Album() {
-  const classes = useStyles();
-
   return (
     <React.Fragment>
       <Grid container spacing={2} alignContent="center">
@@ -85,7 +49,7 @@ export default function Album() {
           <Typography variant="body1" paragraph>
             Technological interests run the gamut from full stack web
             development, embedded device programming, security, automation, and
-            architecture design. If it required building something to solve
+            architecture design. If it requires building something to solve
             problems, I'm in.
           </Typography>
           <Typography variant="body1" paragraph>
@@ -93,7 +57,7 @@ export default function Album() {
             I've been successful running a personal side businesses and maintain
             a strong interest in business development and building strong
             relationships with clients in order to ensure future success for
-            both the client and companies I work for.
+            both the clients and companies I work for.
           </Typography>
           <div>
             <Typography variant="h5" paragraph>
