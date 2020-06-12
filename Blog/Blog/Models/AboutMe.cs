@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace Blog.Models
@@ -6,7 +7,7 @@ namespace Blog.Models
     public class AboutMe
     {
         [JsonProperty(PropertyName = "id")]
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         [JsonProperty(PropertyName = "description")]
         public string Description { get; set; }
