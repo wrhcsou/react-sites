@@ -7,8 +7,15 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import Logo from "../Images/icon.png";
+import Bg from "../Images/bg.jpeg";
 
 const useStyles = makeStyles((theme) => ({
+  root: {
+    display: "flex",
+    flexWrap: "wrap",
+    minWidth: 300,
+    width: "100%",
+  },
   toolbar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
   },
@@ -27,6 +34,39 @@ const useStyles = makeStyles((theme) => ({
     colorPrimary: "rgb(115, 140, 165)",
   },
   offset: theme.mixins.toolbar,
+  image: {
+    position: "relative",
+
+    "&:hover, &$focusVisible": {
+      zIndex: 1,
+      "& $imageBackdrop": {
+        opacity: 0.3,
+      },
+      "& $imageMarked": {
+        opacity: 0,
+      },
+    },
+  },
+  focusVisible: {},
+  imageBackdrop: {
+    position: "absolute",
+    left: 0,
+    right: 0,
+    top: 0,
+    bottom: 0,
+    backgroundColor: "whiteSmoke",
+    opacity: 0,
+    transition: theme.transitions.create("opacity"),
+  },
+  imageMarked: {
+    height: 3,
+    width: 50,
+    backgroundColor: theme.palette.common.white,
+    position: "absolute",
+    bottom: -2,
+    left: "calc(50% - 25px)",
+    transition: theme.transitions.create("opacity"),
+  },
 }));
 
 export default function Header(props) {
@@ -46,14 +86,28 @@ export default function Header(props) {
 
   return (
     <React.Fragment>
-      <AppBar position="fixed" style={{ background: "slategrey" }}>
+      <AppBar
+        position="fixed"
+        style={{
+          background: "slategrey",
+          backgroundImage: `url(${Bg})`,
+        }}
+      >
         <Toolbar className={classes.toolbar}>
           <ThemeProvider theme={theme}>
             <Typography
               variant="h3"
               color="inherit"
               align="center"
-              style={{ fontFamily: "monospace", padding: "10px" }}
+              style={{
+                fontFamily: "monospace",
+                padding: "10px",
+                noWrap: {
+                  textOverflow: "Test",
+                  whiteSpace: "nowrap",
+                  overflow: "hidden",
+                },
+              }}
               className={classes.toolbarTitle}
             >
               <img
@@ -73,12 +127,20 @@ export default function Header(props) {
         >
           {sections.map((section) => (
             <Button
+              focusRipple
+              focusVisibleClassName={classes.focusVisible}
               key={section.title}
-              href={section.url}
-              style={{ color: "whiteSmoke", textTransform: "none" }}
+              onClick={() => props.history.push(section.url)}
+              className={classes.image}
+              style={{
+                color: "whiteSmoke",
+                textTransform: "none",
+              }}
               fullWidth
             >
-              <Typography variant="h6">{section.title}</Typography>
+              <span className={classes.imageBackdrop} />
+              <Typography variant="subtitle1">{section.title}</Typography>
+              <span className={classes.imageMarked} />
             </Button>
           ))}
         </Toolbar>

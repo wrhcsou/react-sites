@@ -11,12 +11,19 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.4" />
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.9.1" />
   </ItemGroup>
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
     <Content Remove="$(SpaRoot)**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+    <None Include="$(SpaRoot)**" />
+    <None Include="$(SpaRoot)**" />
+    <None Include="$(SpaRoot)**" />
+    <None Include="$(SpaRoot)**" />
+    <None Include="$(SpaRoot)**" />
+    <None Include="$(SpaRoot)**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +44,15 @@
     <None Remove="ClientApp\build\static\media\blog-post.2.c206db4f.md" />
     <None Remove="ClientApp\build\static\media\avatar.914a1024.png" />
     <None Remove="ClientApp\build\static\media\blog-post.3.8211793f.md" />
+    <None Remove="ClientApp\public\favicon.ico" />
+    <None Remove="ClientApp\build\robots.txt" />
+    <None Remove="ClientApp\build\manifest.json" />
+    <None Remove="ClientApp\build\robots.txt" />
+    <None Remove="ClientApp\build\manifest.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="DataAccess\" />
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->

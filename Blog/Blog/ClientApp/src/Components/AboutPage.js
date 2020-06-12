@@ -126,7 +126,9 @@ export default function Album() {
               iconStyle={{ background: "slategrey", color: "#fff" }}
               icon={<WorkIcon />}
             >
-              <h3 className="vertical-timeline-element-title">CivicPlus</h3>
+              <h3 className="vertical-timeline-element-title">
+                A Leader in Local Government Technology
+              </h3>
               <p>Software Engineer</p>
               <p>2018 - Present</p>
             </VerticalTimelineElement>
@@ -135,9 +137,11 @@ export default function Album() {
               iconStyle={{ background: "slategrey", color: "#fff" }}
               icon={<WorkIcon />}
             >
-              <h3 className="vertical-timeline-element-title">Garmin</h3>
+              <h3 className="vertical-timeline-element-title">
+                An International Consumer Electronics Manufacturer
+              </h3>
               <h4 className="vertical-timeline-element-subtitle">
-                Automotive OEM
+                Automotive In-Vehicle Systems Division
               </h4>
               <p>Software Engineer</p>
               <p>2013-2018</p>
@@ -148,7 +152,7 @@ export default function Album() {
               icon={<WorkIcon />}
             >
               <h3 className="vertical-timeline-element-title">
-                ArcBest Technologies (Data-Tronics Corp.)
+                A large LTL Frieght and Logistics Corporation
               </h3>
               <p>Programmer Analyst</p>
               <p>2012</p>

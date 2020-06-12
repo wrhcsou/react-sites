@@ -1,5 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Router, Route } from "react-router-dom";
+import { createBrowserHistory } from "history";
 import Container from "@material-ui/core/Container";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
@@ -12,22 +13,17 @@ const sections = [
   { title: "Blog Archive", url: "/" },
   { title: "About Me", url: "/about" },
 ];
+const history = createBrowserHistory();
 
 function App() {
   return (
-    <Router>
+    <Router history={history}>
       <React.Fragment>
         <Container maxWidth="lg">
-          <Header title="Blog" sections={sections} />
+          <Header title="Blog" sections={sections} history={history} />
           <div style={{ padding: "0.5em" }}>
-            <Switch>
-              <Route path="/about">
-                <AboutPage />
-              </Route>
-              <Route path="/">
-                <Blog />
-              </Route>
-            </Switch>
+            <Route path="/about" component={AboutPage} />
+            <Route exact path="/" component={Blog} />
           </div>
         </Container>
         <Footer title="" description="Websites by Wesley Howell" />
