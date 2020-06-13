@@ -1,0 +1,63 @@
+export const aboutMe = {
+  about: [
+    "Nice to meet you!",
+    "I'm a Software Engineer that focuses on driving the use of good engineering principles to develop high quality, defect free software.",
+    "My interests lie in developing software using proven testing principles such as Test Driven Development, promoting detailed software architecture designs, and testing code with high frequency in order to find and reduce risks and defects in implemented software.",
+    "Technological interests run the gamut from full stack web development, embedded device programming, security, automation, and architecture design. If it requires building something to solve problems, I'm in.",
+  ],
+  contact: {
+    email: "info -- wescodes.tech",
+    linkedIn: "https://www.linkedin.com/in/wesleyrhowell",
+    github: "https://github.com/wescodestech",
+  },
+  history: [
+    {
+      title: "Launched This Site",
+      subTitle: "WesCodes.tech Blog",
+      role: "Main Designer, Developer, Writer",
+      date: "Summer 2020",
+      current: true,
+      type: "web",
+    },
+    {
+      title: "A Leader in Local Government Technology",
+      subTitle: "",
+      role: "Software Engineer",
+      date: "2018 - 2020",
+      current: true,
+      type: "work",
+    },
+    {
+      title: "An International Consumer Electronics Manufacturer",
+      subTitle: "Automotive In-Vehicle Systems",
+      role: "Software Engineer",
+      date: "2013 - 2018",
+      current: false,
+      type: "work",
+    },
+    {
+      title: "A Large LTL Freight and Logistics Corporation",
+      subTitle: "",
+      role: "Programmer Analyst",
+      date: "2012",
+      current: false,
+      type: "work",
+    },
+    {
+      title: "Wes Photography",
+      subTitle: "",
+      role: "Owner, Photographer",
+      date: "2008 - 2012",
+      current: false,
+      type: "work",
+    },
+    {
+      title: "Bachelor of Science in Computer Science",
+      subTitle: "",
+      role: "The University of Oklahoma",
+      date: "2009 - 2013",
+      current: false,
+      type: "school",
+    },
+  ],
+};

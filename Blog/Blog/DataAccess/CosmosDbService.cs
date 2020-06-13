@@ -35,7 +35,7 @@ namespace Blog.DataAccess
         {
             try
             {
-                ItemResponse<AboutMe> response = await this._container.ReadItemAsync<AboutMe>(id, new PartitionKey(id));
+                ItemResponse<AboutMe> response = await this._container.ReadItemAsync<AboutMe>(id, new PartitionKey(""));
                 return response.Resource;
             }
             catch (CosmosException ex) when (ex.StatusCode == System.Net.HttpStatusCode.NotFound)
