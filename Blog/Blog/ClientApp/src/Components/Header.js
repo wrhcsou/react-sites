@@ -100,7 +100,6 @@ export default function Header(props) {
               color="inherit"
               align="center"
               style={{
-                fontFamily: "monospace",
                 padding: "10px",
                 noWrap: {
                   textOverflow: "Test",
@@ -116,7 +115,7 @@ export default function Header(props) {
                 height="56px"
                 align="center"
               />{" "}
-              WesCodes.tech
+              My Blog
             </Typography>
           </ThemeProvider>
         </Toolbar>

@@ -1,9 +1,7 @@
 export const aboutMe = {
   about: [
     "Nice to meet you!",
-    "I'm a Software Engineer that focuses on driving the use of good engineering principles to develop high quality, defect free software.",
-    "My interests lie in developing software using proven testing principles such as Test Driven Development, promoting detailed software architecture designs, and testing code with high frequency in order to find and reduce risks and defects in implemented software.",
-    "Technological interests run the gamut from full stack web development, embedded device programming, security, automation, and architecture design. If it requires building something to solve problems, I'm in.",
+    "I'm starting this blog to tell my story, share resources, and to be a helpful voice in advocacy.",
   ],
   contact: {
     email: "info -- wescodes.tech",
