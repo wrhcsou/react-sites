@@ -15,9 +15,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const mainFeaturedPost = {
-  title: blog.featuredPost.title,
-  description: blog.featuredPost.text,
-  image: blog.featuredPost.imageUrl,
+  ...blog.featuredPost,
   imgText: "main image description",
   linkText: "Continue reading…",
 };
@@ -39,16 +37,20 @@ const sidebar = {
   ],
 };
 
-export default function Blog() {
+export default function Blog(props) {
   const classes = useStyles();
 
   return (
     <React.Fragment>
       <main>
-        <MainFeaturedPost post={mainFeaturedPost} />
+        <MainFeaturedPost post={mainFeaturedPost} history={props.history} />
         <Grid container spacing={4}>
           {blog.posts.map((post) => (
-            <FeaturedPost key={post.title} post={post} />
+            <FeaturedPost
+              key={post.title}
+              post={post}
+              history={props.history}
+            />
           ))}
         </Grid>
         <Grid container spacing={5} className={classes.mainGrid}>

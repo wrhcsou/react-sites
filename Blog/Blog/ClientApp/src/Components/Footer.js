@@ -6,9 +6,14 @@ import Typography from "@material-ui/core/Typography";
 
 function Copyright() {
   return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      Copyright © {new Date().getFullYear()}.
-    </Typography>
+    <React.Fragment>
+      <Typography variant="body2" color="textSecondary" align="center">
+        <a href="https://wescodes.tech">https://wescodes.tech</a>
+      </Typography>
+      <Typography variant="body2" color="textSecondary" align="center">
+        Copyright © {new Date().getFullYear()}.
+      </Typography>
+    </React.Fragment>
   );
 }
 
@@ -16,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
   footer: {
     backgroundColor: theme.palette.background.paper,
     // marginTop: theme.spacing(8),
-    padding: theme.spacing(6, 0),
+    padding: theme.spacing(2, 0),
   },
 }));
 
@@ -41,7 +46,7 @@ export default function Footer(props) {
         <Copyright />
         <p />
         <Typography
-          variant="subtitle2"
+          variant="caption"
           align="center"
           color="textSecondary"
           component="p"

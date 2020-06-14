@@ -91,6 +91,7 @@ export default function Header(props) {
         style={{
           background: "slategrey",
           backgroundImage: `url(${Bg})`,
+          backgroundSize: "100%",
         }}
       >
         <Toolbar className={classes.toolbar}>

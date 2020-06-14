@@ -3,16 +3,16 @@ export const blog = {
   github: "https://github.com/wescodestech",
   linkedIn: "https://www.linkedin.com/in/wesleyrhowell",
   featuredPost: {
-    id: 1,
+    id: 0,
     title: "Video of the Day - Apollo Code Listing",
-    text:
+    description:
       "Take a look at an original printing of the Apollog Guidance Computer's code listing to see the code that got us to the moon in 1969!",
-    imageUrl:
+    image:
       "https://cdn.mos.cms.futurecdn.net/QpnB8NFxvo7ktcY4t5DCij-650-80.jpg",
   },
   posts: [
     {
-      id: 2,
+      id: 1,
       title: "ARM Based Macs are Coming",
       description:
         "What do we exect at WWDC and how will developers transaition to a new platform.",
@@ -21,7 +21,7 @@ export const blog = {
       date: "June 12, 2020",
     },
     {
-      id: 3,
+      id: 2,
       title: "Video - Interview with Donald Knuth",
       description:
         "Watch an in-depth interview with Donald Knuth, a legend in computer science and algorithms.",
