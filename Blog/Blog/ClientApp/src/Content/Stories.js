@@ -53,4 +53,25 @@ export const stories = [
       },
     ],
   },
+  {
+    id: 2,
+    title: "Video - Donald Knuth Interview",
+    headerImage: "",
+    body: [
+      {
+        type: "text",
+        content:
+          "I recently watched this video interview with Donald Knuth. If you're not familiar with him, his work is largely responsible for the development of algorithm analysis and understanding computational complexity. If you're a computer scientist, you should already know who he is :). His works, \"The Art of Computer Programming,\" is a complex story of computer science and set the field for many of the algorithms we use today.",
+      },
+      {
+        type: "text",
+        content:
+          "This is a very in-depth interview and I found it very interesting and insightful. When I'm looking for computer science material to consume (read, watch, interact), I really like reading/listening to Donald Knuth's work and experience.",
+      },
+      {
+        type: "embedVideo",
+        content: "https://www.youtube.com/embed/2BdBfsXbST8",
+      },
+    ],
+  },
 ];
