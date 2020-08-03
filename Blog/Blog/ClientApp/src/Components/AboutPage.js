@@ -52,6 +52,7 @@ export default function Album() {
         <h4 className="vertical-timeline-element-subtitle">{item.subTitle}</h4>
         <p>{item.role}</p>
         <p>{item.date}</p>
+        <p>{item.description}</p>
       </VerticalTimelineElement>
     );
   };
@@ -67,6 +68,7 @@ export default function Album() {
         <h4 className="vertical-timeline-element-subtitle">{item.subTitle}</h4>
         <p>{item.role}</p>
         <p>{item.date}</p>
+        <p>{item.description}</p>
       </VerticalTimelineElement>
     );
   };

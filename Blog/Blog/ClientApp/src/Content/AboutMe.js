@@ -1,9 +1,11 @@
 export const aboutMe = {
   about: [
     "Nice to meet you!",
-    "I'm a Software Engineer that focuses on driving the use of good engineering principles to develop high quality, defect free software.",
-    "My interests lie in developing software using proven testing principles such as Test Driven Development, promoting detailed software architecture designs, and testing code with high frequency in order to find and reduce risks and defects in implemented software.",
-    "Technological interests run the gamut from full stack web development, embedded device programming, security, automation, and architecture design. If it requires building something to solve problems, I'm in.",
+    "I'm a Software Engineer that focuses on driving the use of modern software technologies and architecture by using sound engineering principles to develop high quality, scalable, secure, and defect free software.",
+    "A proven developer that has helped organizations scale concepts to production ready systems. Migrated and re-architect existing systems to scale and exponentially improve performance. Collaborated and established corporate processes and education to become more security aware and minded.",
+    "Professional interests lie in developing software using proven testing principles, Test Driven Development, promoting software architecture design, and testing code with high frequency in order to find and reduce risks and defects in live software.",
+    "Technological interests run the gamut from full stack web development, modern application architecture, microservices, APIs, embedded device programming, security, automation, and system design. If it requires building something to solve a problem, I'm in.",
+    "A constant learner and always willing to pick up new skills quickly and making sure I'm using the best tools for the job.",
   ],
   contact: {
     email: "info -- wescodes.tech",
@@ -14,31 +16,37 @@ export const aboutMe = {
     {
       title: "Launched This Site",
       subTitle: "WesCodes.tech Blog",
-      role: "Main Designer, Developer, Writer",
+      role: "Main Developer",
       date: "Summer 2020",
       current: true,
       type: "web",
     },
     {
-      title: "A Leader in Local Government Technology",
-      subTitle: "",
+      title: "CivicPlus",
+      subTitle: "Making local government work better.",
       role: "Software Engineer",
-      date: "2018 - 2020",
+      description:
+        "A member of the Product Engineering group responsible for developing cloud based services to enable local governments to work more effectively, collect and process payments, and manage HR processes. Developed new software, CI/CD pipelines, unit testing, and technical proofs-of-concept.",
+      date: "2018 - present",
       current: true,
       type: "work",
     },
     {
-      title: "An International Consumer Electronics Manufacturer",
+      title: "Garmin",
       subTitle: "Automotive In-Vehicle Systems",
       role: "Software Engineer",
+      description:
+        "A member of the Automotive OEM engineering group designing and implementing embedded and Android based navigation products for Automotive manufactures. Developed best practices and processes for the department on embedded device security and privacy, code auditing, and C/C++ dependency management.",
       date: "2013 - 2018",
       current: false,
       type: "work",
     },
     {
-      title: "A Large LTL Freight and Logistics Corporation",
+      title: "Arc Best Technologies (ABF Freight Systems)",
       subTitle: "",
       role: "Programmer Analyst",
+      description:
+        "Developed support applications to generate testing data from production databases for developers’ application testing, Windows Services, and ASP to .Net application conversion/modernization",
       date: "2012",
       current: false,
       type: "work",
