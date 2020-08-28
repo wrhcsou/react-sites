@@ -10,14 +10,54 @@ import "react-vertical-timeline-component/style.min.css";
 import WorkIcon from "@material-ui/icons/Work";
 import SchoolIcon from "@material-ui/icons/School";
 import StarIcon from "@material-ui/icons/Star";
-import AvatarImage from "../Images/avatar.png";
+import AvatarImage from "../Images/profilepicture.jpg";
 import OuLogo from "../Images/oulogo.png";
+import AbfLogo from "../Images/abf.png";
+import GarminLogo from "../Images/garmin.svg";
+import CpLogo from "../Images/cplogo.png";
+import WesLogo from "../Images/icon.png";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import WebIcon from "@material-ui/icons/Web";
 import { aboutMe } from "../Content/AboutMe";
+import ExperienceIconPanel from "./ExperienceIconPanel";
 
 export default function Album() {
+  const returnLogo = (item) => {
+    if (item.logo === "OuLogo") {
+      return (
+        <div style={{ width: "50px" }}>
+          <img src={OuLogo} alt="" width="100%" />
+        </div>
+      );
+    }
+    if (item.logo === "ArcBLogo") {
+      return (
+        <div style={{ width: "80px" }}>
+          <img src={AbfLogo} alt="" width="100%" />
+        </div>
+      );
+    }
+    if (item.logo === "GarminLogo") {
+      return (
+        <div style={{ width: "75px" }}>
+          <img src={GarminLogo} alt="" width="100%" />
+        </div>
+      );
+    }
+    if (item.logo === "CpLogo") {
+      return (
+        <div style={{ width: "50px" }}>
+          <img src={CpLogo} alt="" width="100%" />
+        </div>
+      );
+    }
+    return (
+      <div style={{ width: "50px" }}>
+        <img src={WesLogo} alt="" width="100%" />
+      </div>
+    );
+  };
   const renderWebHistoryItem = (item) => {
     return (
       <VerticalTimelineElement
@@ -29,10 +69,23 @@ export default function Album() {
         iconStyle={{ background: "steelblue", color: "#fff" }}
         icon={<WebIcon />}
       >
-        <h3 className="vertical-timeline-element-title">{item.title}</h3>
-        <h4 className="vertical-timeline-element-subtitle">{item.subTitle}</h4>
+        <Grid container spacing={2}>
+          <Grid item xs={8}>
+            <h3 className="vertical-timeline-element-title">{item.title}</h3>
+          </Grid>
+          <Grid item xs={4}>
+            {returnLogo(item)}
+          </Grid>
+          <Grid item xs={12}>
+            <h4 className="vertical-timeline-element-subtitle">
+              {item.subTitle}
+            </h4>
+          </Grid>
+        </Grid>
+
         <p>{item.role}</p>
         <p>{item.date}</p>
+        <p>{item.description}</p>
       </VerticalTimelineElement>
     );
   };
@@ -48,8 +101,19 @@ export default function Album() {
         iconStyle={{ background: "slategrey", color: "#fff" }}
         icon={<WorkIcon />}
       >
-        <h3 className="vertical-timeline-element-title">{item.title}</h3>
-        <h4 className="vertical-timeline-element-subtitle">{item.subTitle}</h4>
+        <Grid container spacing={2}>
+          <Grid item xs={8}>
+            <h3 className="vertical-timeline-element-title">{item.title}</h3>
+          </Grid>
+          <Grid item xs={4}>
+            {returnLogo(item)}
+          </Grid>
+          <Grid item xs={12}>
+            <h4 className="vertical-timeline-element-subtitle">
+              {item.subTitle}
+            </h4>
+          </Grid>
+        </Grid>
         <p>{item.role}</p>
         <p>{item.date}</p>
         <p>{item.description}</p>
@@ -64,8 +128,19 @@ export default function Album() {
         iconStyle={{ background: "slategrey", color: "#fff" }}
         icon={<WorkIcon />}
       >
-        <h3 className="vertical-timeline-element-title">{item.title}</h3>
-        <h4 className="vertical-timeline-element-subtitle">{item.subTitle}</h4>
+        <Grid container spacing={2}>
+          <Grid item xs={8}>
+            <h3 className="vertical-timeline-element-title">{item.title}</h3>
+          </Grid>
+          <Grid item xs={4}>
+            {returnLogo(item)}
+          </Grid>
+          <Grid item xs={12}>
+            <h4 className="vertical-timeline-element-subtitle">
+              {item.subTitle}
+            </h4>
+          </Grid>
+        </Grid>
         <p>{item.role}</p>
         <p>{item.date}</p>
         <p>{item.description}</p>
@@ -80,17 +155,19 @@ export default function Album() {
         iconStyle={{ background: "darkred", color: "#fff" }}
         icon={<SchoolIcon />}
       >
-        <h3 className="vertical-timeline-element-title">
-          <Grid container spacing={2}>
-            <Grid item xs={8}>
-              {item.title}
-            </Grid>
-            <Grid item xs={4}>
-              <img src={OuLogo} alt="" width="50%" />
-            </Grid>
+        <Grid container spacing={2}>
+          <Grid item xs={8}>
+            <h3 className="vertical-timeline-element-title">{item.title}</h3>
           </Grid>
-        </h3>
-        <h4 className="vertical-timeline-element-subtitle">{item.subTitle}</h4>
+          <Grid item xs={4}>
+            {returnLogo(item)}
+          </Grid>
+          <Grid item xs={12}>
+            <h4 className="vertical-timeline-element-subtitle">
+              {item.subTitle}
+            </h4>
+          </Grid>
+        </Grid>
         <p>{item.role}</p>
         <p>{item.date}</p>
       </VerticalTimelineElement>
@@ -134,8 +211,14 @@ export default function Album() {
             align="center"
             gutterBottom
           >
-            <img align="center" src={AvatarImage} alt="" width="30%" />
-            About Me
+            <img
+              align="center"
+              src={AvatarImage}
+              alt=""
+              width="40%"
+              style={{ borderRadius: "50%", border: "5px solid #fff" }}
+            />
+            <p></p>About Me
           </Typography>
           {renderAboutMeText()}
           <div>
@@ -174,6 +257,7 @@ export default function Album() {
               </Grid>
             </Grid>
           </div>
+          <ExperienceIconPanel />
         </Grid>
 
         <Grid item xs={12} sm={7}>

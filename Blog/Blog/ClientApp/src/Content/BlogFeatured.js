@@ -1,5 +1,6 @@
 export const blog = {
-  about: "Software developer, technology nerd, photographer, sports fan",
+  about:
+    "Software Developer | Architecture | Cloud Platforms | Technology Enthusist | Photographer | Lifelong Learner",
   github: "https://github.com/wescodestech",
   linkedIn: "https://www.linkedin.com/in/wesleyrhowell",
   featuredPost: {

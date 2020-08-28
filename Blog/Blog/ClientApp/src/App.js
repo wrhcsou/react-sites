@@ -11,7 +11,7 @@ import "./App.css";
 
 const sections = [
   { title: "Home", url: "/" },
-  { title: "Blog Archive", url: "/" },
+  // { title: "Blog Archive", url: "/" },
   { title: "About Me", url: "/about" },
 ];
 const history = createBrowserHistory();

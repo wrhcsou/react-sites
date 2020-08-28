@@ -15,11 +15,14 @@ export const aboutMe = {
   history: [
     {
       title: "Launched This Site",
-      subTitle: "WesCodes.tech Blog",
+      subTitle: "WesCodes.tech",
+      description:
+        "The purpose of this site is to serve as a foundational stepping stone for developing a personal blogging platform.",
       role: "Main Developer",
       date: "Summer 2020",
       current: true,
       type: "web",
+      logo: "WesCodesLogo",
     },
     {
       title: "CivicPlus",
@@ -30,6 +33,7 @@ export const aboutMe = {
       date: "2018 - present",
       current: true,
       type: "work",
+      logo: "CpLogo",
     },
     {
       title: "Garmin",
@@ -40,6 +44,7 @@ export const aboutMe = {
       date: "2013 - 2018",
       current: false,
       type: "work",
+      logo: "GarminLogo",
     },
     {
       title: "Arc Best Technologies (ABF Freight Systems)",
@@ -50,6 +55,7 @@ export const aboutMe = {
       date: "2012",
       current: false,
       type: "work",
+      logo: "ArcBLogo",
     },
     {
       title: "Wes Photography",
@@ -66,6 +72,7 @@ export const aboutMe = {
       date: "2009 - 2013",
       current: false,
       type: "school",
+      logo: "OuLogo",
     },
   ],
 };
