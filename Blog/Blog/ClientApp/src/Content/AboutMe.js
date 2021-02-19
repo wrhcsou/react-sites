@@ -66,6 +66,14 @@ export const aboutMe = {
       type: "work",
     },
     {
+      title: "Master of Science in Engineering Management",
+      subTitle: "",
+      role: "The University of Kansas",
+      date: "December 2020",
+      current: false,
+      type: "school",
+    },
+    {
       title: "Bachelor of Science in Computer Science",
       subTitle: "",
       role: "The University of Oklahoma",
