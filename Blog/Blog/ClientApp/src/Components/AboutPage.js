@@ -12,6 +12,7 @@ import SchoolIcon from "@material-ui/icons/School";
 import StarIcon from "@material-ui/icons/Star";
 import AvatarImage from "../Images/profilepicture.jpg";
 import OuLogo from "../Images/oulogo.png";
+import KuLogo from "../Images/kulogo.png";
 import AbfLogo from "../Images/abf.png";
 import GarminLogo from "../Images/garmin.svg";
 import CpLogo from "../Images/cplogo.png";
@@ -28,6 +29,13 @@ export default function Album() {
       return (
         <div style={{ width: "50px" }}>
           <img src={OuLogo} alt="" width="100%" />
+        </div>
+      );
+    }
+    if (item.logo === "KuLogo") {
+      return (
+        <div style={{ width: "50px" }}>
+          <img src={KuLogo} alt="" width="100%" />
         </div>
       );
     }

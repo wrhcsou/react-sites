@@ -72,6 +72,7 @@ export const aboutMe = {
       date: "December 2020",
       current: false,
       type: "school",
+      logo: "KuLogo",
     },
     {
       title: "Bachelor of Science in Computer Science",
